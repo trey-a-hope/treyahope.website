@@ -2,6 +2,7 @@ var app = angular.module('treyahope', []);
 /* Contact Controller */
 app.controller('Contact', function($scope, $http) {
     $scope.attemptedSend = false;
+
     /* Sends contact form to my email. */
     $scope.sendEmail = function(form){
         $scope.attemptedSend = true;
