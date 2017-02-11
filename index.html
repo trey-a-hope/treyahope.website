@@ -25,7 +25,15 @@
     <link rel="shortcut icon" href="favicon.png">
     <!-- AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
-    <script src="js/Angular/treyahope.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/scripts/ui-bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
+    <!-- Module -->
+    <script src="app/treyahope.js"></script>
+    <!-- Controllers -->
+    <script src="app/contact/ContactController.js"></script>
+    <script src="app/modal/DisplayNotificationModalController.js"></script>
+    <!-- Services -->
+    <script src="app/services/ModalService.js"></script>
     <!-- Material Design Colors -->
     <link rel="stylesheet" href="css/material-design-colors.css">
   </head>
@@ -209,7 +217,7 @@
                 <div class="box"><a href="img/portfolio-5.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Salem Avenue" data-footer="Taken August 8, 2016"><img src="img/portfolio-5.jpg" alt="" class="img-responsive"></a></div>
               </div>
               <div class="col-sm-4 col-xs-4">
-                <div class="box"><a href="img/portfolio-6.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Aurora, Colorado" data-footer="Taken July 24, 2016"><img src="img/portfolio-6.jpg" alt="" class="img-responsive"></a></div>
+                <div class="box"><a href="img/portfolio-6.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Figueroa, Los Angeles" data-footer="Taken January 15, 2017"><img src="img/portfolio-6.jpg" alt="" class="img-responsive"></a></div>
               </div>
             </div>
           </div>
@@ -217,7 +225,7 @@
       </div>
     </section>
     <!-- Portfolio End -->
-    <!-- Projects page-->
+    <!-- Projects Page-->
     <section id="text" style="background-color: #333;" class="text-page section-inverse">
       <div class="container">
         <div class="row">
@@ -241,9 +249,9 @@
         </div>
       </div>
     </section>
-    <!-- Projects page end-->
-    <!-- contact-->
-    <section id="contact" style="background-color: #fff;" class="text-page" ng-controller="Contact"> 
+    <!-- Projects Page End -->
+    <!-- Contact Page -->
+    <section id="contact" style="background-color: #fff;" class="text-page" ng-controller="ContactController as vm"> 
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -263,7 +271,7 @@
                               <input type="text" 
                                     name="firstName"
                                     id="firstName"
-                                    ng-model="firstName" 
+                                    ng-model="vm.firstName" 
                                     placeholder="Enter your firstname" 
                                     required="required" 
                                     class="form-control">
@@ -280,7 +288,7 @@
                               <input type="text" 
                                      name="lastName" 
                                      id="lastName" 
-                                     ng-model="lastName"
+                                     ng-model="vm.lastName"
                                      placeholder="Enter your lastname" 
                                      required="required" 
                                      class="form-control">
@@ -297,7 +305,7 @@
                         <input type="email" 
                                name="email" 
                                id="email" 
-                               ng-model="email"
+                               ng-model="vm.email"
                                placeholder="Enter your email" 
                                required="required" 
                                class="form-control">
@@ -312,14 +320,14 @@
                         <textarea rows="4" 
                              name="message" 
                              id="message" 
-                             ng-model="message"
+                             ng-model="vm.message"
                              placeholder="Enter your message" 
                              required="required" 
                              class="form-control"></textarea>
                       </div>
                     </div>
                     <div class="text-center">
-                      <input type="button" ng-click="sendEmail(contactForm)" value="Send Message" class="btn btn-primary btn-block">
+                      <input type="button" ng-click="vm.sendEmail(contactForm)" value="Send Message" class="btn btn-primary btn-block">
                     </div>
                   </div>
                 </form>
@@ -360,6 +368,7 @@
         </div>
       </div>
     </section>
+    <!-- Contact Page Ends -->
     <footer style="background-color: #111;" class="section-inverse">
       <div class="container"> 
         <div class="row copyright text-center">
