@@ -1,0 +1,3 @@
+declare class TreyHope {
+    constructor();
+}

@@ -29,12 +29,12 @@ module App.Contact {
                     data: data,
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'}
                 }).success((result: any)=>{
-                    this.modalService.displayNotification('Message sent, I will response shortly.', 'Got It', 'OK', true);
+                    this.modalService.displayNotification('Message sent, I will respond shortly.', 'Got It', 'OK', true);
                 }).error((error: any) =>{
                     this.modalService.displayNotification(error.message, 'Error', 'OK', false);
                 })
             }else{
-                this.modalService.displayNotification('There were erros in your submission.', 'Error', 'OK', false);
+                this.modalService.displayNotification('There were errors in your submission.', 'Error', 'OK', false);
             }
         }
     }
