@@ -10,7 +10,6 @@ module App.Contact {
 
         static $inject = ['$scope', '$http', 'ModalService'];
         constructor(public $scope: any, public $http: any, public modalService: ModalService){
-
         }
 
         sendEmail = (form: any): void =>{
@@ -29,12 +28,12 @@ module App.Contact {
                     data: data,
                     headers: {'Content-Type': 'application/x-www-form-urlencoded'}
                 }).success((result: any)=>{
-                    this.modalService.displayNotification('Message sent, I will respond shortly.', 'Got It', 'OK', true);
+                    this.modalService.displayToast('Got It', 'Message sent, I will respond shortly.', 'success');
                 }).error((error: any) =>{
-                    this.modalService.displayNotification(error.message, 'Error', 'OK', false);
+                    this.modalService.displayToast('Error', error.message, 'danger');
                 })
             }else{
-                this.modalService.displayNotification('There were errors in your submission.', 'Error', 'OK', false);
+                this.modalService.displayToast('Error', 'There were erros in your submission.', 'danger');
             }
         }
     }

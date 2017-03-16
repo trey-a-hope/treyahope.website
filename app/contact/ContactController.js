@@ -24,13 +24,13 @@ var App;
                             data: data,
                             headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
                         }).success(function (result) {
-                            _this.modalService.displayNotification('Message sent, I will respond shortly.', 'Got It', 'OK', true);
+                            _this.modalService.displayToast('Got It', 'Message sent, I will respond shortly.', 'success');
                         }).error(function (error) {
-                            _this.modalService.displayNotification(error.message, 'Error', 'OK', false);
+                            _this.modalService.displayToast('Error', error.message, 'danger');
                         });
                     }
                     else {
-                        _this.modalService.displayNotification('There were errors in your submission.', 'Error', 'OK', false);
+                        _this.modalService.displayToast('Error', 'There were erros in your submission.', 'danger');
                     }
                 };
             }

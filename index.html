@@ -7,7 +7,6 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
-    <!-- Bootstrap and Font Awesome css-->
     <!-- Creative CSS -->
     <link href="css/creative.css" rel="stylesheet">
     <!-- we use cdn but you can also include local files located in css directory-->
@@ -25,6 +24,12 @@
     <link rel="stylesheet" href="css/custom.css">
     <!-- AngularJS -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- Ng Toast -->
+    <link rel="stylesheet" href="plugins/ng-toast/dist/ngToast.min.css">
+    <link rel="stylesheet" href="plugins/ng-toast/dist/ngToast-animations.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-sanitize.js"></script>
+    <script src="plugins/ng-toast/dist/ngToast.min.js"></script>
     <!-- Bootstrap -->
     <script src="js/scripts/ui-bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
     <!-- Module -->
@@ -37,7 +42,9 @@
     <!-- Material Design Colors -->
     <link rel="stylesheet" href="css/material-design-colors.css">
   </head>
+
   <body data-spy="scroll" data-target="#navigation" data-offset="120">
+    <toast></toast>
     <!-- intro-->
     <section id="intro" style="background-image: url('img/background_pic.jpg');" class="intro">      
       <div class="overlay"></div>

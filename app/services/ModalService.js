@@ -3,10 +3,12 @@ var App;
     var Services;
     (function (Services) {
         var ModalService = (function () {
-            function ModalService($modal, $q) {
+            function ModalService($modal, $q, ngToast) {
                 var _this = this;
                 this.$modal = $modal;
                 this.$q = $q;
+                this.ngToast = ngToast;
+                this.toastTypes = ['success', 'info', 'warning', 'danger'];
                 this.displayNotification = function (notificationMessage, header, acknowledgeButtonText, success) {
                     _this.$modal.open({
                         templateUrl: 'app/modal/DisplayNotificationModalTemplate.html',
@@ -29,8 +31,18 @@ var App;
                         }
                     });
                 };
+                this.displayToast = function (title, subTitle, toastType) {
+                    if (_this.toastTypes.indexOf(toastType) < 0) {
+                        alert("Wrong toast type being passed in.");
+                        return;
+                    }
+                    _this.ngToast.create({
+                        className: toastType,
+                        content: '<strong>' + title + '</strong>' + ' ' + subTitle
+                    });
+                };
             }
-            ModalService.$inject = ['$modal', '$q'];
+            ModalService.$inject = ['$modal', '$q', 'ngToast'];
             return ModalService;
         })();
         Services.ModalService = ModalService;

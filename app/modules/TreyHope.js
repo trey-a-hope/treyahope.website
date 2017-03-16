@@ -1,8 +1,16 @@
 var TreyHope = (function () {
     function TreyHope() {
         angular.module('treyahope', [
-            'ui.bootstrap'
-        ]);
+            'ui.bootstrap',
+            'ngSanitize',
+            'ngAnimate',
+            'ngToast'
+        ]).config(['ngToastProvider', function (ngToastProvider) {
+                ngToastProvider.configure({
+                    animation: 'slide'
+                });
+            }]);
+        ;
     }
     return TreyHope;
 })();
