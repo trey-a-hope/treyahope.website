@@ -4,6 +4,7 @@ class TreyHope{
             'ui.bootstrap',
             'ngSanitize',
             'ngAnimate',
+            //http://tamerayd.in/ngToast/#
             'ngToast'
         ]).config(['ngToastProvider', (ngToastProvider: any) => {
             ngToastProvider.configure({
