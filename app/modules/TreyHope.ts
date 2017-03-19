@@ -10,7 +10,7 @@ class TreyHope{
             ngToastProvider.configure({
                 animation: 'slide' // or 'fade'
             });
-        }]);;
+        }]);
     }
 }
 new TreyHope();

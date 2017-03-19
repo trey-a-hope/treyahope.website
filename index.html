@@ -7,6 +7,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
+    <!-- Google Analytics -->
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-93971476-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
     <!-- Creative CSS -->
     <link href="css/creative.css" rel="stylesheet">
     <!-- we use cdn but you can also include local files located in css directory-->
@@ -43,7 +51,7 @@
     <link rel="stylesheet" href="css/material-design-colors.css">
   </head>
 
-  <body data-spy="scroll" data-target="#navigation" data-offset="120">
+  <body data-spy="scroll" data-target="#navigation" data-offset="120" ng-controller="ContactController as vm">
     <toast style="margin-top: 20px"></toast>
     <!-- intro-->
     <section id="intro" style="background-image: url('img/background_pic.jpg');" class="intro">      
@@ -382,7 +390,9 @@
         <div class="row">
           <div class="col-md-12">
             <div class="row">
-              <h2 class="heading yellow-text text-darken-2">Projects</h2>
+              <div class="col-md-12 col-lg-8">
+                <h2 class="heading yellow-text text-darken-2">Projects</h2>
+              </div>
             </div>
             <div class="row">   
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">
@@ -438,7 +448,7 @@
     </section>
     <!-- Projects Page End -->
     <!-- Contact Page -->
-    <section id="contact" style="background-color: #fff;" class="text-page" ng-controller="ContactController as vm"> 
+    <section id="contact" style="background-color: #fff;" class="text-page"> 
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -559,7 +569,8 @@
     <footer style="background-color: #111;" class="section-inverse">
       <div class="container"> 
         <div class="row copyright text-center">
-          <p >‪Agápē</p>
+          <p style="cursor: pointer"
+            ng-click="vm.footerClick()">‪Agápē (Click Me)</p>
         </div>
       </div>
     </footer>

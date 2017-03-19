@@ -10,7 +10,6 @@ var TreyHope = (function () {
                     animation: 'slide'
                 });
             }]);
-        ;
     }
     return TreyHope;
 })();
