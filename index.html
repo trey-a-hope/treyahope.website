@@ -7,8 +7,11 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="all,follow">
+    <!-- Wow.js -->
+    <script src="js/wow.min.js"></script>
     <!-- Google Analytics -->
     <script>
+        new WOW().init();
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
       ga('create', 'UA-93971476-1', 'auto');
       ga('send', 'pageview');
@@ -49,19 +52,20 @@
     <script src="app/services/ModalService.js"></script>
     <!-- Material Design Colors -->
     <link rel="stylesheet" href="css/material-design-colors.css">
+
   </head>
 
   <body data-spy="scroll" data-target="#navigation" data-offset="120" ng-controller="ContactController as vm">
     <toast style="margin-top: 20px"></toast>
     <!-- intro-->
-    <section id="intro" style="background-image: url('img/background_pic.jpg');" class="intro">      
+    <section id="intro" style="background-image: url('img/background_pic.jpg');" class="intro">
       <div class="overlay"></div>
       <div class="content">
         <div class="container clearfix">
           <div class="row">
             <div class="col-md-8 col-md-offset-2 col-sm-12">
               <h5 class="italic yellow-text text-lighten-2">Personal Website of</h5>
-              <h1 class="animated flip yellow-text text-darken-2">Trey A. Hope</h1>
+              <h1 class="wow bounceInLeft yellow-text text-darken-2">Trey A. Hope</h1>
               <h5 class="italic yellow-text text-lighten-2">Better known as Tr3umPHant-Designs, welcome!</h5>
             </div>
           </div>
@@ -97,7 +101,7 @@
     <section id="about" class="text">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-sm-6">
+          <div class="col-md-6 col-sm-6 wow slideInLeft">
             <h2 class="heading yellow-text text-darken-2">About me</h2>
             <p class="lead">"‪<strong>Agápē</strong> - Selfless love of one person for another without sexual implications (especially love that is spiritual in nature).‬"</p>
             <p>First and foremost, thank you for taking time out of your day to visit my portfolio website. My name is Trey Hope, a 24 year old web/mobile developer, graphic designer, and software development fanatic. I am a native of Trotwood, Ohio and an alumni of Northern Kentucky University, with a BS in Computer Science. Currently, I work at DTT in Los Angeles, California as a AngularJS/PHP developer.</p>
@@ -105,8 +109,8 @@
               will fall into place. <strong>Agápē</strong>.
             </p>
           </div>
-          <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1">
-            <p><img src="img/main_profile_pic.jpg" alt="" class="img-responsive"></p>
+          <div class="col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 wow slideInRight">
+            <p><img src="img/profile.jpeg" alt="" class="img-responsive" style="border-radius: 50%;"></p>
           </div>
         </div>
       </div>
@@ -119,21 +123,21 @@
           <div class="col-md-12">
             <h2 class="heading yellow-text text-darken-2">Skills</h2>
             <div class="row">
-              <div class="col-sm-4">
+              <div class="col-sm-4 wow bounceInRight">
                 <div class="box">
                   <div class="icon text-center"><i class="fa fa-desktop green-text text-darken-2"></i></div>
                   <h4 class="green-text text-darken-4 text-center">Web Development</h4>
                   <h5 class="text-center">HTML5, CSS3, Javascript, PHP, MySQL, AngularJS, KnockoutJS, Bootstrap, Material Design</h5>
                 </div>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-4 wow bounceInDown">
                 <div class="box">
                   <div class="icon text-center"><i class="fa fa-mobile-phone red-text text-darken-2"></i></div>
                   <h4 class="red-text text-darken-4 text-center">Mobile Development</h4>
                   <h5 class="text-center">Java, C#, XML, Swift, Android, iOS</h5>
                 </div>
               </div>
-              <div class="col-sm-4">
+              <div class="col-sm-4 wow bounceInLeft">
                 <div class="box">
                   <div class="icon text-center"><i class="fa fa-paint-brush blue-text text-darken-2"></i></div>
                   <h4 class="blue-text text-darken-4 text-center">Design</h4>
@@ -157,7 +161,7 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item wow slideInUp">
                   <a class="portfolio-box box" href="img/flyers/flyer-1.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="The Calm" data-footer="Created March 24, 2013">
                       <img class="img-responsive" src="img/flyers/flyer-1.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
@@ -165,10 +169,10 @@
                             <div class="project-category">The Calm</div>
                             <div class="project-name">Created March 24, 2013.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
-              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item wow slideInUp">
                   <a class="portfolio-box box" href="img/flyers/flyer-2.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="90's Bash" data-footer="Created October 12, 2013">
                       <img class="img-responsive" src="img/flyers/flyer-2.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
@@ -176,10 +180,10 @@
                             <div class="project-category">90's Bash</div>
                             <div class="project-name">Created October 12, 2013.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
-              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item wow slideInUp">
                   <a class="portfolio-box box" href="img/flyers/flyer-3.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Baby Shower" data-footer="Created March 3, 2014">
                       <img class="img-responsive" src="img/flyers/flyer-3.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
@@ -187,10 +191,10 @@
                             <div class="project-category">Baby Shower</div>
                             <div class="project-name">Created March 3, 2014.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
-              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item wow slideInUp">
                   <a class="portfolio-box box" href="img/flyers/flyer-4.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="G.I.F.T.S." data-footer="Created February 18, 2015">
                       <img class="img-responsive" src="img/flyers/flyer-4.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
@@ -198,12 +202,12 @@
                             <div class="project-category">G.I.F.T.S.</div>
                             <div class="project-name">Created February 18, 2015.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
             </div>
             <div class="row">
-              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item wow slideInUp">
                   <a class="portfolio-box box" href="img/flyers/flyer-5.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="BSU Pool Party" data-footer="Created August 4, 2014">
                       <img class="img-responsive" src="img/flyers/flyer-5.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
@@ -211,10 +215,10 @@
                             <div class="project-category">BSU Pool Party</div>
                             <div class="project-name">Created August 4, 2014.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
-              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item wow slideInUp">
                   <a class="portfolio-box box" href="img/flyers/flyer-6.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="17th Annual Miss Black & Gold" data-footer="Created August 19, 2013">
                       <img class="img-responsive" src="img/flyers/flyer-6.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
@@ -222,10 +226,10 @@
                             <div class="project-category">17th Annual Miss Black & Gold</div>
                             <div class="project-name">Created August 19, 2013.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
-              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item wow slideInUp">
                   <a class="portfolio-box box" href="img/flyers/flyer-7.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Mr. & Ms. Black NKU Informational" data-footer="Created August 19, 2013">
                       <img class="img-responsive" src="img/flyers/flyer-7.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
@@ -233,10 +237,10 @@
                             <div class="project-category">Mr. & Ms. Black NKU Informational</div>
                             <div class="project-name">Created August 19, 2013.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
-              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item wow slideInUp">
                   <a class="portfolio-box box" href="img/flyers/flyer-8.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="The 3rd Annual Pharaoh's Ball" data-footer="Created April 7, 2015">
                       <img class="img-responsive" src="img/flyers/flyer-8.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
@@ -244,12 +248,12 @@
                             <div class="project-category">The 3rd Annual Pharaoh's Ball</div>
                             <div class="project-name">Created April 7, 2015.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
             </div>
             <div class="row">
-              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item wow slideInUp">
                   <a class="portfolio-box box" href="img/flyers/flyer-9.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="PHright Knight" data-footer="Created October 16, 2014">
                       <img class="img-responsive" src="img/flyers/flyer-9.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
@@ -257,10 +261,10 @@
                             <div class="project-category">PHright Knight</div>
                             <div class="project-name">Created October 16, 2014.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
-              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item wow slideInUp">
                   <a class="portfolio-box box" href="img/flyers/flyer-10.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Pure Silver" data-footer="Created February 20, 2013">
                       <img class="img-responsive" src="img/flyers/flyer-10.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
@@ -268,10 +272,10 @@
                             <div class="project-category">Pure Silver</div>
                             <div class="project-name">Created February 20, 2013.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
-              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item wow slideInUp">
                   <a class="portfolio-box box" href="img/flyers/flyer-11.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Third Thursdays" data-footer="Created September 29, 2014">
                       <img class="img-responsive" src="img/flyers/flyer-11.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
@@ -279,10 +283,10 @@
                             <div class="project-category">Third Thursdays</div>
                             <div class="project-name">Created September 29, 2014.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
-              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item">
+              <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 portfolio-item wow slideInUp">
                   <a class="portfolio-box box" href="img/flyers/flyer-12.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Yard Sale & Cookout" data-footer="Created August 26, 2014">
                       <img class="img-responsive" src="img/flyers/flyer-12.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
@@ -290,7 +294,7 @@
                             <div class="project-category">Yard Sale And Cookout</div>
                             <div class="project-name">Created August 26, 2014.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
             </div>
@@ -310,74 +314,87 @@
               </div>
             </div>
             <div class="row">
-              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">
-                  <a class="portfolio-box box" href="img/portfolio-1.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Blake Street" data-footer="Taken September 29, 2016">
+              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow bounceInLeft">
+                  <a class="portfolio-box box" href="img/portfolio-1.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Grand Central Market" data-footer="Taken May 6th, 2017">
                       <img class="img-responsive" src="img/portfolio-1.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
                           <div class="portfolio-box-caption-content">
-                            <div class="project-category">Blake Street</div>
-                            <div class="project-name">Taken September 29, 2016.</div>
+                            <div class="project-category">Grand Central Market</div>
+                            <div class="project-name">Taken May 6th, 2017.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
-              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">
-                  <a class="portfolio-box box" href="img/portfolio-2.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Red Rocks Park and Amphitheatre" data-footer="Taken September 18, 2016">
+              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow bounceInUp">
+                  <a class="portfolio-box box" href="img/portfolio-2.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Grand Central Market" data-footer="Taken May 6th, 2017">
                       <img class="img-responsive" src="img/portfolio-2.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
                           <div class="portfolio-box-caption-content">
-                            <div class="project-category">Red Rocks Park and Amphitheatre</div>
-                            <div class="project-name">Taken September 18, 2016.</div>
+                            <div class="project-category">Grand Central Market</div>
+                            <div class="project-name">Taken May 6th, 2017.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
-              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">
-                  <a class="portfolio-box box" href="img/portfolio-3.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Golden Gate Canyon State Park" data-footer="Taken September 18, 2016">
+              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow bounceInRight">
+                  <a class="portfolio-box box" href="img/portfolio-3.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Adam Krief" data-footer="Taken May 4th, 2017">
                       <img class="img-responsive" src="img/portfolio-3.jpg" alt="" class="img-responsive gallery-item"></img>
                       <div class="portfolio-box-caption">
                           <div class="portfolio-box-caption-content">
-                            <div class="project-category">Golden Gate Canyon State Park</div>
-                            <div class="project-name">Taken September 18, 2016.</div>
+                            <div class="project-category">Adam Krief</div>
+                            <div class="project-name">Taken May 4th, 2017.</div>
                           </div>
-                      </div>    
+                      </div>
                   </a>
               </div>
             </div>
             <div class="row">
-              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">
-                  <a class="portfolio-box box" href="img/portfolio-4.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Royal Caribbean Cruise" data-footer="Taken August 29, 2016">
-                      <img class="img-responsive" src="img/portfolio-4.jpg" alt="" class="img-responsive gallery-item"></img>
-                      <div class="portfolio-box-caption">
-                          <div class="portfolio-box-caption-content">
-                            <div class="project-category">Royal Caribbean Cruise</div>
-                            <div class="project-name">Taken August 29, 2016.</div>
-                          </div>
-                      </div>    
-                  </a>
-              </div>
-              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">
-                  <a class="portfolio-box box" href="img/portfolio-5.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Salem Avenue" data-footer="Taken August 8, 2016">
-                      <img class="img-responsive" src="img/portfolio-5.jpg" alt="" class="img-responsive gallery-item"></img>
-                      <div class="portfolio-box-caption">
-                          <div class="portfolio-box-caption-content">
-                            <div class="project-category">Salem Ave</div>
-                            <div class="project-name">Taken August 8, 2016.</div>
-                          </div>
-                      </div>    
-                  </a>
-              </div>
-              <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">
-                  <a class="portfolio-box box" href="img/portfolio-6.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Figueroa, Los Angeles" data-footer="Taken January 15, 2017">
-                      <img class="img-responsive" src="img/portfolio-6.jpg" alt="" class="img-responsive gallery-item"></img>
-                      <div class="portfolio-box-caption">
-                          <div class="portfolio-box-caption-content">
-                            <div class="project-category">Figueroa, Los Angeles</div>
-                            <div class="project-name">Taken January 15, 2017.</div>
-                          </div>
-                      </div>    
-                  </a>
-              </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow bounceInDown">
+                    <a class="portfolio-box box" href="img/portfolio-6.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Promenade Towers" data-footer="Taken April 15th, 2017">
+                        <img class="img-responsive" src="img/portfolio-6.jpg" alt="" class="img-responsive gallery-item"></img>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                              <div class="project-category">Promenade Towers</div>
+                              <div class="project-name">Taken April 15th, 2017.</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow bounceInLeft">
+                    <a class="portfolio-box box" href="img/portfolio-4.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Adam Krief" data-footer="Taken May 4th, 2017">
+                        <img class="img-responsive" src="img/portfolio-4.jpg" alt="" class="img-responsive gallery-item"></img>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                              <div class="project-category">Adam Krief</div>
+                              <div class="project-name">Taken May 4th, 2017.</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow bounceInRight">
+                    <a class="portfolio-box box" href="img/portfolio-5.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Korea Town" data-footer="Taken April 12th, 2017">
+                        <img class="img-responsive" src="img/portfolio-5.jpg" alt="" class="img-responsive gallery-item"></img>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                              <div class="project-category">Korea Town</div>
+                              <div class="project-name">Taken April 12th, 2017.</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow bounceInUp">
+                    <a class="portfolio-box box" href="img/portfolio-7.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Franco on Melrose" data-footer="Taken April 21st, 2017">
+                        <img class="img-responsive" src="img/portfolio-7.jpg" alt="" class="img-responsive gallery-item"></img>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                              <div class="project-category">Franco on Melrose</div>
+                              <div class="project-name">Taken April 21st, 2017.</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
           </div>
         </div>
@@ -394,8 +411,8 @@
                 <h2 class="heading yellow-text text-darken-2">Projects</h2>
               </div>
             </div>
-            <div class="row">   
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">
+            <div class="row">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow slideInLeft">
                     <a class="portfolio-box box" href="http://t3d.tr3umphant-designs.com">
                         <img class="img-responsive" src="img/project-1.png"></img>
                         <div class="portfolio-box-caption">
@@ -403,10 +420,10 @@
                                 <div class="project-category">Tr3umPHant-Designs</div>
                                 <div class="project-name">My first portfolio website.</div>
                             </div>
-                        </div>    
+                        </div>
                     </a>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow slideInLeft">
                     <a class="portfolio-box box" href="http://rightwayts.tr3umphant-designs.com">
                         <img class="img-responsive" src="img/project-2.png"></img>
                         <div class="portfolio-box-caption">
@@ -414,10 +431,10 @@
                                 <div class="project-category">RightwayTS</div>
                                 <div class="project-name">Website for local Denver traffic control business.</div>
                             </div>
-                        </div>    
+                        </div>
                     </a>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow slideInLeft">
                     <a class="portfolio-box box" href="http://keyrequest.nku.edu/login.php">
                         <img class="img-responsive" src="img/project-3.png"></img>
                         <div class="portfolio-box-caption">
@@ -425,12 +442,12 @@
                                 <div class="project-category">NKU Key Request Form</div>
                                 <div class="project-name">Form used for requesting rooms on NKU's campus.</div>
                             </div>
-                        </div>    
+                        </div>
                     </a>
                 </div>
             </div>
             <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item">
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow slideInLeft">
                     <a class="portfolio-box box" href="http://brielhope.com">
                         <img class="img-responsive" src="img/project-4.png"></img>
                         <div class="portfolio-box-caption">
@@ -438,7 +455,7 @@
                                 <div class="project-category">Brie's Portfolio</div>
                                 <div class="project-name">A portfolio website I created for my sister.</div>
                             </div>
-                        </div>    
+                        </div>
                     </a>
                 </div>
             </div>
@@ -448,13 +465,13 @@
     </section>
     <!-- Projects Page End -->
     <!-- Contact Page -->
-    <section id="contact" style="background-color: #fff;" class="text-page"> 
+    <section id="contact" style="background-color: #fff;" class="text-page">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
             <h2 class="heading yellow-text text-darken-2">Contact</h2>
             <div class="row">
-              <div class="col-md-6">
+              <div class="col-md-6 wow slideInLeft">
                 <ng-form novalidate name="contactForm">
                   <div class="controls">
                     <div class="row">
@@ -463,14 +480,13 @@
                           <label for="name">First Name</label>
                            <div ng-class="{'has-error' : contactForm.firstName.$invalid && (contactForm.firstName.$dirty || vm.attemptedSend)}"
                              uib-tooltip="Required"
-                             tooltip-enable="contactForm.firstName.$invalid" 
+                             tooltip-enable="contactForm.firstName.$invalid"
                              tooltip-placement="top-right">
-                              <input type="text" 
+                              <input type="text"
                                     name="firstName"
                                     id="firstName"
-                                    ng-model="vm.firstName" 
-                                    placeholder="Enter your firstname" 
-                                    required="required" 
+                                    ng-model="vm.firstName"
+                                    required="required"
                                     class="form-control">
                           </div>
                         </div>
@@ -480,14 +496,13 @@
                           <label for="surname">Last Name</label>
                           <div ng-class="{'has-error' : contactForm.lastName.$invalid && (contactForm.lastName.$dirty || vm.attemptedSend)}"
                              uib-tooltip="Required"
-                             tooltip-enable="contactForm.lastName.$invalid" 
+                             tooltip-enable="contactForm.lastName.$invalid"
                              tooltip-placement="top-right">
-                              <input type="text" 
-                                     name="lastName" 
-                                     id="lastName" 
+                              <input type="text"
+                                     name="lastName"
+                                     id="lastName"
                                      ng-model="vm.lastName"
-                                     placeholder="Enter your lastname" 
-                                     required="required" 
+                                     required="required"
                                      class="form-control">
                           </div>
                         </div>
@@ -497,14 +512,13 @@
                       <label for="surname">Email</label>
                       <div ng-class="{'has-error' : contactForm.email.$invalid && (contactForm.email.$dirty || vm.attemptedSend)}"
                              uib-tooltip="Required"
-                             tooltip-enable="contactForm.email.$invalid" 
+                             tooltip-enable="contactForm.email.$invalid"
                              tooltip-placement="top-right">
-                        <input type="email" 
-                               name="email" 
-                               id="email" 
+                        <input type="email"
+                               name="email"
+                               id="email"
                                ng-model="vm.email"
-                               placeholder="Enter your email" 
-                               required="required" 
+                               required="required"
                                class="form-control">
                       </div>
                     </div>
@@ -512,14 +526,13 @@
                       <label for="surname">Message</label>
                       <div ng-class="{'has-error' : contactForm.message.$invalid && (contactForm.message.$dirty || vm.attemptedSend)}"
                              uib-tooltip="Required"
-                             tooltip-enable="contactForm.message.$invalid" 
+                             tooltip-enable="contactForm.message.$invalid"
                              tooltip-placement="top-right">
-                        <textarea rows="4" 
-                             name="message" 
-                             id="message" 
+                        <textarea rows="4"
+                             name="message"
+                             id="message"
                              ng-model="vm.message"
-                             placeholder="Enter your message" 
-                             required="required" 
+                             required="required"
                              class="form-control"></textarea>
                       </div>
                     </div>
@@ -529,7 +542,7 @@
                   </div>
                 </form>
               </div>
-              <div class="col-md-6">
+              <div class="col-md-6 wow slideInRight">
                 <p class="social">
                   <a class="gplus">
                       <i class="fa fa-phone yellow-text text-lighten-2"></i>
@@ -567,7 +580,7 @@
     </section>
     <!-- Contact Page Ends -->
     <footer style="background-color: #111;" class="section-inverse">
-      <div class="container"> 
+      <div class="container">
         <div class="row copyright text-center">
           <p style="cursor: pointer"
             ng-click="vm.footerClick()">‪Agápē (Click Me)</p>
@@ -592,14 +605,14 @@
     <!--<script src="js/gmaps.js"></script>-->
     <!-- main script-->
     <script src="js/front.js"></script>
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->		
-    <script>		
-      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=		
-      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;		
-      e=o.createElement(i);r=o.getElementsByTagName(i)[0];		
-      e.src='//www.google-analytics.com/analytics.js';		
-      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));		
-      ga('create','UA-XXXXX-X');ga('send','pageview');		
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+    <script>
+      (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+      function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+      e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+      e.src='//www.google-analytics.com/analytics.js';
+      r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+      ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
   </body>
 </html>
