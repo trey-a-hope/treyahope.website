@@ -45,6 +45,8 @@
     <script src="js/scripts/ui-bootstrap/ui-bootstrap-tpls-0.11.0.js"></script>
     <!-- Module -->
     <script src="app/modules/TreyHope.js"></script>
+    <!-- Portfolio -->
+    <script src="app/portfolio/PortfolioController.js"></script>
     <!-- Controllers -->
     <script src="app/contact/ContactController.js"></script>
     <script src="app/modal/DisplayNotificationModalController.js"></script>
@@ -55,7 +57,7 @@
 
   </head>
 
-  <body data-spy="scroll" data-target="#navigation" data-offset="120" ng-controller="ContactController as vm">
+  <body data-spy="scroll" data-target="#navigation" data-offset="120">
     <toast style="margin-top: 20px"></toast>
     <!-- intro-->
     <section id="intro" style="background-image: url('img/background_pic.jpg');" class="intro">
@@ -465,7 +467,7 @@
     </section>
     <!-- Projects Page End -->
     <!-- Contact Page -->
-    <section id="contact" style="background-color: #fff;" class="text-page">
+    <section id="contact" style="background-color: #fff;" class="text-page" ng-controller="ContactController as vm">
       <div class="container">
         <div class="row">
           <div class="col-md-12">
@@ -579,7 +581,7 @@
       </div>
     </section>
     <!-- Contact Page Ends -->
-    <footer style="background-color: #111;" class="section-inverse">
+    <footer style="background-color: #111;" class="section-inverse" ng-controller="ContactController as vm">
       <div class="container">
         <div class="row copyright text-center">
           <p style="cursor: pointer"
