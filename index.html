@@ -48,6 +48,7 @@
     <!-- Portfolio -->
     <script src="app/portfolio/PortfolioController.js"></script>
     <!-- Controllers -->
+    <script src="app/about/AboutController.js"></script>
     <script src="app/contact/ContactController.js"></script>
     <script src="app/modal/DisplayNotificationModalController.js"></script>
     <!-- Services -->
@@ -100,7 +101,7 @@
     </header>
     <!-- /.navbar-->
     <!-- about-->
-    <section id="about" class="text">
+    <section id="about" class="text" ng-controller="AboutController as vm">
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-sm-6 wow slideInLeft">
@@ -373,13 +374,13 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow bounceInRight">
-                    <a class="portfolio-box box" href="img/portfolio-5.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Korea Town" data-footer="Taken April 12th, 2017">
-                        <img class="img-responsive" src="img/portfolio-5.jpg" alt="" class="img-responsive gallery-item"></img>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow bounceInLeft">
+                    <a class="portfolio-box box" href="img/portfolio-8.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Madison Park" data-footer="Taken May 13th, 2017">
+                        <img class="img-responsive" src="img/portfolio-8.jpg" alt="" class="img-responsive gallery-item"></img>
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
-                              <div class="project-category">Korea Town</div>
-                              <div class="project-name">Taken April 12th, 2017.</div>
+                              <div class="project-category">Madison Park</div>
+                              <div class="project-name">Taken May 13th, 2017.</div>
                             </div>
                         </div>
                     </a>
@@ -393,6 +394,17 @@
                             <div class="portfolio-box-caption-content">
                               <div class="project-category">Franco on Melrose</div>
                               <div class="project-name">Taken April 21st, 2017.</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 portfolio-item wow bounceInRight">
+                    <a class="portfolio-box box" href="img/portfolio-5.jpg" title="" data-toggle="lightbox" data-gallery="portfolio" data-title="Korea Town" data-footer="Taken April 12th, 2017">
+                        <img class="img-responsive" src="img/portfolio-5.jpg" alt="" class="img-responsive gallery-item"></img>
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                              <div class="project-category">Korea Town</div>
+                              <div class="project-name">Taken April 12th, 2017.</div>
                             </div>
                         </div>
                     </a>

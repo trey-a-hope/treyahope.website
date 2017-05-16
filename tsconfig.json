@@ -8,6 +8,7 @@
         "sourceMap": true
     },
     "files": [
+        "app/about/AboutController.ts",
         "app/contact/ContactController.ts",
         "app/modal/DisplayNotificationModalController.ts",
         "app/modules/TreyHope.ts",
@@ -19,6 +20,6 @@
         "js/scripts/typings/angular-ui-router.d.ts",
         "js/scripts/typings/es6-promise.d.ts",
         "js/scripts/typings/firebase.d.ts",
-        "js/scripts/typings/jquery.d.ts"
+        "js/scripts/typings/jquery.d.ts",
     ]
 }
