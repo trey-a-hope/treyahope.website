@@ -15,6 +15,7 @@ module App.Contact {
         message: string;
         attemptedSend: boolean = false;
         toastMessages: Array<ToastMessage> = new Array<ToastMessage>();
+        emailRegex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
         static $inject = ['$scope', '$http', 'ModalService'];
         constructor(public $scope: any, public $http: ng.IHttpService, public modalService: ModalService){
@@ -34,7 +35,6 @@ module App.Contact {
         sendEmail = (form: any): void =>{
             this.attemptedSend = true;
             if(form.$valid){
-                this.modalService.displayToast('Got It', 'Message sent, I will respond shortly.', 'success');    
                 /* Create data */
                 var data = {
                     firstName: this.firstName,

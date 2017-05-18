@@ -16,6 +16,7 @@ var App;
                 this.modalService = modalService;
                 this.attemptedSend = false;
                 this.toastMessages = new Array();
+                this.emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
                 this.prepareToastMessages = function () {
                     _this.$http.get('json/Quotes.json')
                         .then(function (response) {
@@ -28,7 +29,6 @@ var App;
                 this.sendEmail = function (form) {
                     _this.attemptedSend = true;
                     if (form.$valid) {
-                        _this.modalService.displayToast('Got It', 'Message sent, I will respond shortly.', 'success');
                         var data = {
                             firstName: _this.firstName,
                             lastName: _this.lastName,

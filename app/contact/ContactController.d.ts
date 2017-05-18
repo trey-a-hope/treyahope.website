@@ -15,6 +15,7 @@ declare module App.Contact {
         message: string;
         attemptedSend: boolean;
         toastMessages: Array<ToastMessage>;
+        emailRegex: RegExp;
         static $inject: string[];
         constructor($scope: any, $http: ng.IHttpService, modalService: ModalService);
         prepareToastMessages: () => void;

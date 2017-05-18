@@ -9,9 +9,11 @@
     <meta name="robots" content="all,follow">
     <!-- Wow.js -->
     <script src="js/wow.min.js"></script>
+    <!-- Spotify -->
+    <script src="js/spotify-web-api.js"></script>
     <!-- Google Analytics -->
     <script>
-        new WOW().init();
+      new WOW().init();
       window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
       ga('create', 'UA-93971476-1', 'auto');
       ga('send', 'pageview');
@@ -533,6 +535,7 @@
                                id="email"
                                ng-model="vm.email"
                                required="required"
+                               ng-pattern="vm.emailRegex"
                                class="form-control">
                       </div>
                     </div>
@@ -576,7 +579,7 @@
                   <a href="https://twitter.com/Travisty92" class="gplus blue-text text-lighten-2">
                     <i class="fa fa-twitter"></i>
                   </a>
-                  <a href="https://www.linkedin.com/in/trey-hope-69a3a774" class="gplus red-text text-lighten-2">
+                  <a href="https://www.linkedin.com/in/trey-hope-69a3a774" class="gplus gray-text text-lighten-2">
                     <i class="fa fa-linkedin-square"></i>
                   </a>
                   <a href="https://plus.google.com/+TreyHope" class="gplus teal-text text-lighten-2">
@@ -584,6 +587,9 @@
                   </a>
                   <a href="https://www.instagram.com/treyahope/" class="gplus orange-text text-lighten-2">
                     <i class="fa fa-instagram"></i>
+                  </a>
+                  <a href="https://www.youtube.com/channel/UCZPhxIr0rjxwAC5pRYwz4UA" class="gplus red-text text-lighten-2">
+                    <i class="fa fa-youtube"></i>
                   </a>
                 </p>
               </div>

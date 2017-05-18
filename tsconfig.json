@@ -21,5 +21,7 @@
         "js/scripts/typings/es6-promise.d.ts",
         "js/scripts/typings/firebase.d.ts",
         "js/scripts/typings/jquery.d.ts",
+        "js/scripts/typings/spotify-api.d.ts",
+        "js/scripts/typings/spotify-web-api.d.ts"
     ]
 }
