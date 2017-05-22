@@ -1,0 +1,128 @@
+  <div ng-controller="ContactController as vm">
+    <section id="contact" style="background-color: #fff;" class="text-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="heading yellow-text text-darken-2">Contact</h2>
+            <div class="row">
+              <div class="col-md-6 wow slideInLeft">
+                <ng-form novalidate name="contactForm">
+                  <div class="controls">
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <label for="name">First Name</label>
+                           <div ng-class="{'has-error' : contactForm.firstName.$invalid && (contactForm.firstName.$dirty || vm.attemptedSend)}"
+                             uib-tooltip="Required"
+                             tooltip-enable="contactForm.firstName.$invalid"
+                             tooltip-placement="top-right">
+                              <input type="text"
+                                    name="firstName"
+                                    id="firstName"
+                                    ng-model="vm.firstName"
+                                    required="required"
+                                    class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <div class="form-group">
+                          <label for="surname">Last Name</label>
+                          <div ng-class="{'has-error' : contactForm.lastName.$invalid && (contactForm.lastName.$dirty || vm.attemptedSend)}"
+                             uib-tooltip="Required"
+                             tooltip-enable="contactForm.lastName.$invalid"
+                             tooltip-placement="top-right">
+                              <input type="text"
+                                     name="lastName"
+                                     id="lastName"
+                                     ng-model="vm.lastName"
+                                     required="required"
+                                     class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="surname">Email</label>
+                      <div ng-class="{'has-error' : contactForm.email.$invalid && (contactForm.email.$dirty || vm.attemptedSend)}"
+                             uib-tooltip="Required"
+                             tooltip-enable="contactForm.email.$invalid"
+                             tooltip-placement="top-right">
+                        <input type="email"
+                               name="email"
+                               id="email"
+                               ng-model="vm.email"
+                               required="required"
+                               ng-pattern="vm.emailRegex"
+                               class="form-control">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="surname">Message</label>
+                      <div ng-class="{'has-error' : contactForm.message.$invalid && (contactForm.message.$dirty || vm.attemptedSend)}"
+                             uib-tooltip="Required"
+                             tooltip-enable="contactForm.message.$invalid"
+                             tooltip-placement="top-right">
+                        <textarea rows="4"
+                             name="message"
+                             id="message"
+                             ng-model="vm.message"
+                             required="required"
+                             class="form-control"></textarea>
+                      </div>
+                    </div>
+                    <div class="text-center">
+                      <input type="button" ng-click="vm.sendEmail(contactForm)" value="Send Message" class="btn btn-primary btn-block">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-6 wow slideInRight">
+                <p class="social">
+                  <a class="gplus">
+                      <i class="fa fa-phone yellow-text text-lighten-2"></i>
+                  </a>
+                  <h5 class="text-center">(937)270-5527</h5>
+                </p>
+                <p class="social">
+                  <a class="gplus">
+                      <i class="fa fa-envelope yellow-text text-lighten-2"></i>
+                  </a>
+                  <h5 class="text-center">trey.a.hope@gmail.com</h5>
+                </p>
+                <p class="social">
+                  <a href="https://www.facebook.com/trey.a.hope" class="gplus green-text text-lighten-2">
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                  <a href="https://twitter.com/Travisty92" class="gplus blue-text text-lighten-2">
+                    <i class="fa fa-twitter"></i>
+                  </a>
+                  <a href="https://www.linkedin.com/in/trey-hope-69a3a774" class="gplus gray-text text-lighten-2">
+                    <i class="fa fa-linkedin-square"></i>
+                  </a>
+                  <a href="https://plus.google.com/+TreyHope" class="gplus teal-text text-lighten-2">
+                    <i class="fa fa-google-plus"></i>
+                  </a>
+                  <a href="https://www.instagram.com/treyahope/" class="gplus orange-text text-lighten-2">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                  <a href="https://www.youtube.com/channel/UCZPhxIr0rjxwAC5pRYwz4UA" class="gplus red-text text-lighten-2">
+                    <i class="fa fa-youtube"></i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer style="background-color: #111;" class="section-inverse">
+      <div class="container">
+        <div class="row copyright text-center">
+          <p style="cursor: pointer"
+            ng-click="vm.footerClick()">‪Agápē (Click Me)</p>
+        </div>
+      </div>
+    </footer>
+  </div>
