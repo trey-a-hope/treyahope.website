@@ -6,7 +6,6 @@ class TreyHope{
             'ui.bootstrap',
             'ngSanitize',
             'ngAnimate',
-            //http://tamerayd.in/ngToast/#
             'ngToast'
         ])
         /* Configuration for Toast Provider */

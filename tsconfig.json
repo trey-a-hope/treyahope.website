@@ -10,7 +10,6 @@
     "files": [
         "app/Modal/DisplayNotificationModalController.ts",
         "app/Modules/TreyHope.ts",
-        "app/portfolio/PortfolioController.ts",
         "app/Services/ModalService.ts",
         "app/Services/MyFirebaseRef.ts",
         "app/Pages/About/AboutController.ts",

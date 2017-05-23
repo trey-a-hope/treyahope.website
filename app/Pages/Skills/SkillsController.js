@@ -8,7 +8,7 @@ var App;
                 this.$http = $http;
                 this.myFirebaseRef = myFirebaseRef;
                 this.openResume = function () {
-                    window.open("https://drive.google.com/open?id=1boj6YroDM8gy9eJwMQ2zq1UlRLC2LKbdWRWQAuur7hA");
+                    window.open("https://drive.google.com/open?id=0B0_tFXHHRl4tUl9uS2dwb05WWDQ");
                 };
             }
             SkillsController.$inject = ['$scope', '$http', 'MyFirebaseRef'];
