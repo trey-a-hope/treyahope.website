@@ -1,0 +1,29 @@
+<div ng-controller="CommentsController as vm">
+    <section id="comments" style="background-color: lightsteelblue;" class="text-page">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <h2 class="heading yellow-text text-darken-2">Comments</h2>
+            <div class="row" ng-repeat="comment in vm.comments"> 
+                <div class="col-xs-2">
+                    <img class="img-responsive" style="border-radius: 50%;" ng-src="{{ comment.imageDownloadUrl }}"></img>
+                </div>  
+                <div class="col-xs-10">
+                    <h4>{{ comment.profileName }}</h4>
+                    <p><i class="fa fa-clock-o"></i> {{ comment.postDateTime | date:'MMMM dd, yyyy' }}</p>
+                    <h5><i>"{{ comment.message }}"</i><h5>
+                </div>
+            </div>
+            <div class="row" style="padding-top: 40px">
+                <div class="col-xs-12">
+                    <button class="btn btn-primary"
+                        ng-click="vm.leaveAComment()">
+                        Leave A Comment
+                    </button>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>

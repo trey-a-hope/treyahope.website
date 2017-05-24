@@ -13,6 +13,7 @@
         "app/Services/ModalService.ts",
         "app/Services/MyFirebaseRef.ts",
         "app/Pages/About/AboutController.ts",
+        "app/Pages/Comments/CommentsController.ts",
         "app/Pages/Contact/ContactController.ts",
         "app/Pages/GraphicDesign/GraphicDesignController.ts",
         "app/Pages/Portfolio/PortfolioController.ts",
