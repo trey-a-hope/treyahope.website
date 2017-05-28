@@ -22,7 +22,7 @@ var App;
                 this.storageRef = this.firebase.storage().ref();
             }
             return MyFirebaseRef;
-        })();
+        }());
         Services.MyFirebaseRef = MyFirebaseRef;
         angular.module('treyahope').service('MyFirebaseRef', MyFirebaseRef);
     })(Services = App.Services || (App.Services = {}));

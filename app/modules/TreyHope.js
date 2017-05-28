@@ -22,6 +22,6 @@ var TreyHope = (function () {
         });
     }
     return TreyHope;
-})();
+}());
 new TreyHope();
 //# sourceMappingURL=TreyHope.js.map

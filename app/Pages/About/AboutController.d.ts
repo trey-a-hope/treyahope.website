@@ -4,7 +4,9 @@ declare module App.About {
         $scope: any;
         $http: ng.IHttpService;
         myFirebaseRef: MyFirebaseRef;
+        showImage: boolean;
         static $inject: string[];
         constructor($scope: any, $http: ng.IHttpService, myFirebaseRef: MyFirebaseRef);
+        toggleImageShow: () => void;
     }
 }

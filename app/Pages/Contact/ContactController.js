@@ -6,7 +6,7 @@ var App;
             function ToastMessage() {
             }
             return ToastMessage;
-        })();
+        }());
         Contact.ToastMessage = ToastMessage;
         var ContactController = (function () {
             function ContactController($scope, $http, modalService) {
@@ -62,9 +62,9 @@ var App;
                 };
                 this.prepareToastMessages();
             }
-            ContactController.$inject = ['$scope', '$http', 'ModalService'];
             return ContactController;
-        })();
+        }());
+        ContactController.$inject = ['$scope', '$http', 'ModalService'];
         Contact.ContactController = ContactController;
         angular.module('treyahope').controller('ContactController', ContactController);
     })(Contact = App.Contact || (App.Contact = {}));

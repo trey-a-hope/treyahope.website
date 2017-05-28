@@ -19,15 +19,15 @@ var App;
                 newComment.message = "There is a forced to be reckoned with.";
                 this.comments.push(newComment);
             }
-            CommentsController.$inject = ['$scope', '$http', 'MyFirebaseRef'];
             return CommentsController;
-        })();
+        }());
+        CommentsController.$inject = ['$scope', '$http', 'MyFirebaseRef'];
         Comments.CommentsController = CommentsController;
         var Comment = (function () {
             function Comment() {
             }
             return Comment;
-        })();
+        }());
         Comments.Comment = Comment;
         angular.module('treyahope').controller('CommentsController', CommentsController);
     })(Comments = App.Comments || (App.Comments = {}));

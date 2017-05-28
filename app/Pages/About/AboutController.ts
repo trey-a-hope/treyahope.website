@@ -2,6 +2,7 @@ module App.About {
     import MyFirebaseRef = Services.MyFirebaseRef;
 
     export class AboutController {
+        showImage: boolean = true;
         static $inject = ['$scope', '$http', 'MyFirebaseRef'];
         constructor(public $scope: any, public $http: ng.IHttpService, public myFirebaseRef: MyFirebaseRef){
             // var spotifyApi = new SpotifyWebApi();
@@ -11,6 +12,10 @@ module App.About {
             //     }, function(err) {
             //         console.error(err);
             //     });
+        }
+
+        toggleImageShow = (): void => {
+            this.showImage = !this.showImage;
         }
 
     }
