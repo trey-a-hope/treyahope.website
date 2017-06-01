@@ -11,3 +11,39 @@
     transition: opacity .2s ease-in-out;
     cursor: pointer;
 }
+
+section#about {
+  background-image: url('../img/background/cubes.png');
+  background-position: center;
+  background-repeat: repeat;
+}
+
+section#skills {
+  background-image: url('../img/background/gplay.png');
+  background-position: center;
+  background-repeat: repeat;
+}
+
+section#graphic-design{
+  background-image: url('../img/background/black-linen.png');
+  background-position: center;
+  background-repeat: repeat;
+}
+
+section#portfolio{
+  background-image: url('../img/background/escheresque.png');
+  background-position: center;
+  background-repeat: repeat;
+}
+
+section#projects{
+  background-image: url('../img/background/asfalt-dark.png');
+  background-position: center;
+  background-repeat: repeat;
+}
+
+section#contact{
+  background-image: url('../img/background/bright-squares.png');
+  background-position: center;
+  background-repeat: repeat;
+}
