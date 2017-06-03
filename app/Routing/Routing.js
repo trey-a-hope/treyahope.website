@@ -21,10 +21,22 @@ var Routing;
                 controller: 'ServiceController',
                 controllerAs: 'vm'
             });
-            this.$stateProvider.state('testimonials', {
-                url: '/testimonials',
+            this.$stateProvider.state('projects', {
+                url: '/projects',
+                templateUrl: 'app/Pages/Projects/ProjectsTemplate.html',
+                controller: 'ProjectsController',
+                controllerAs: 'vm'
+            });
+            this.$stateProvider.state('reviews', {
+                url: '/reviews',
                 templateUrl: 'app/Pages/Comments/CommentsTemplate.html',
                 controller: 'CommentsController',
+                controllerAs: 'vm'
+            });
+            this.$stateProvider.state('contact', {
+                url: '/contact',
+                templateUrl: 'app/Pages/Contact/ContactTemplate.html',
+                controller: 'ContactController',
                 controllerAs: 'vm'
             });
             this.$urlRouteProvider.otherwise('/');
