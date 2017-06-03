@@ -8,5 +8,6 @@ declare module App.About {
         static $inject: string[];
         constructor($scope: any, $http: ng.IHttpService, myFirebaseRef: MyFirebaseRef);
         toggleImageShow: () => void;
+        viewMyResume: () => void;
     }
 }

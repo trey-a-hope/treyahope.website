@@ -12,6 +12,9 @@ var App;
                 this.toggleImageShow = function () {
                     _this.showImage = !_this.showImage;
                 };
+                this.viewMyResume = function () {
+                    window.open("https://drive.google.com/open?id=0B0_tFXHHRl4tUl9uS2dwb05WWDQ");
+                };
             }
             return AboutController;
         }());

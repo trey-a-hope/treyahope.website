@@ -1,19 +1,11 @@
+declare var firebase: any;
 
 class TreyHope{
     constructor(){
         /* Module Setup */
         angular.module('treyahope', [
-            'ui.bootstrap',
-            'ngSanitize',
-            'ngAnimate',
-            'ngToast'
+            'ui.router'
         ])
-        /* Configuration for Toast Provider */
-        .config(['ngToastProvider', (ngToastProvider: any) => {
-            ngToastProvider.configure({
-                animation: 'slide' // or 'fade'
-            });
-        }])
         /* Directive - Static Include - Used for ng-include to keep parent scope through templates */
         .directive('staticInclude', ($http: ng.IHttpService, $templateCache: ng.ITemplateCacheService, $compile: ng.ICompileService) => {
             return (scope: ng.IScope, element: any, attrs: any): any => {

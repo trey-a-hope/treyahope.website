@@ -18,6 +18,10 @@ module App.About {
             this.showImage = !this.showImage;
         }
 
+        viewMyResume = (): void => {
+            window.open("https://drive.google.com/open?id=0B0_tFXHHRl4tUl9uS2dwb05WWDQ"); 
+        }
+
     }
     angular.module('treyahope').controller('AboutController', AboutController);
 }
