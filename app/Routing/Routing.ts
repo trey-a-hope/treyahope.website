@@ -25,6 +25,15 @@ module Routing {
                 controller: 'ServiceController',
                 controllerAs: 'vm'
             });
+
+            /* Comments */
+            this.$stateProvider.state('testimonials', {
+                url: '/testimonials',
+                templateUrl: 'app/Pages/Comments/CommentsTemplate.html',
+                controller: 'CommentsController',
+                controllerAs: 'vm'
+            });
+
             this.$urlRouteProvider.otherwise('/');
         }
     }

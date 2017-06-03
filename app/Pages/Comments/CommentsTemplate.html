@@ -1,29 +1,101 @@
-<div ng-controller="CommentsController as vm">
-    <section id="comments" style="background-color: lightsteelblue;" class="text-page">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <h2 class="heading yellow-text text-darken-2">Comments</h2>
-            <div class="row" ng-repeat="comment in vm.comments"> 
-                <div class="col-xs-2">
-                    <img class="img-responsive" style="border-radius: 50%;" ng-src="{{ comment.imageDownloadUrl }}"></img>
-                </div>  
-                <div class="col-xs-10">
-                    <h4>{{ comment.profileName }}</h4>
-                    <p><i class="fa fa-clock-o"></i> {{ comment.postDateTime | date:'MMMM dd, yyyy' }}</p>
-                    <h5><i>"{{ comment.message }}"</i><h5>
+
+<!--Section: Testimonials v.1-->
+<section class="section animated fadeIn" >
+
+    <!--Section heading-->
+    <h1 class="section-heading">Don't Just Take My Word For It</h1>
+    <!--Section sescription-->
+    <p class="section-description">See what some of my clients have said about my past work.</p>
+
+    <div class="row">
+
+        <!--First column -->
+        <div class="col-lg-4 col-md-12 mb-r">
+
+            <!--Card-->
+            <div class="card testimonial-card">
+
+                <!--Background color-->
+                <div class="card-up teal lighten-2">
                 </div>
-            </div>
-            <div class="row" style="padding-top: 40px">
-                <div class="col-xs-12">
-                    <button class="btn btn-primary"
-                        ng-click="vm.leaveAComment()">
-                        Leave A Comment
-                    </button>
+
+                <!--Avatar-->
+                <div class="avatar"><img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle img-responsive">
                 </div>
+
+                <div class="card-block">
+                    <!--Name-->
+                    <h4 class="card-title">Anna Doe</h4>
+                    <hr>
+                    <!--Quotation-->
+                    <p><i class="fa fa-quote-left"></i> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos, adipisci.</p>
+                </div>
+
             </div>
-          </div>
+            <!--/.Card-->
+
+
         </div>
-      </div>
-    </section>
-  </div>
+        <!--/First column -->
+
+        <!--Second column-->
+        <div class="col-lg-4 col-md-12 mb-r">
+
+            <!--Card-->
+            <div class="card testimonial-card">
+
+                <!--Background color-->
+                <div class="card-up indigo darken-2">
+                </div>
+
+                <!--Avatar-->
+                <div class="avatar"><img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-1.jpg" class="rounded-circle img-responsive">
+                </div>
+
+                <div class="card-block">
+                    <!--Name-->
+                    <h4 class="card-title">John Aston</h4>
+                    <hr>
+                    <!--Quotation-->
+                    <p><i class="fa fa-quote-left"></i> Neque cupiditate assumenda in maiores repudiandae mollitia architecto.</p>
+                </div>
+
+            </div>
+            <!--/.Card-->
+
+
+        </div>
+        <!--/Second column-->
+
+        <!--Third column-->
+        <div class="col-lg-4 col-md-12 mb-r">
+
+            <!--Card-->
+            <div class="card testimonial-card">
+
+                <!--Background color-->
+                <div class="card-up purple darken-2"></div>
+
+                <!--Avatar-->
+                <div class="avatar"><img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-3.jpg" class="rounded-circle img-responsive">
+                </div>
+
+                <div class="card-block">
+                    <!--Name-->
+                    <h4 class="card-title">Maria Kate</h4>
+                    <hr>
+                    <!--Quotation-->
+                    <p><i class="fa fa-quote-left"></i> Delectus impedit saepe officiis ab aliquam repellat, rem totam unde ducimus.</p>
+                </div>
+
+            </div>
+            <!--/.Card-->
+
+
+        </div>
+        <!--/Third column-->
+
+    </div>
+
+</section>
+<!--Section: Testimonials v.1-->
