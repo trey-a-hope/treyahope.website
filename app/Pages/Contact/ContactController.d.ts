@@ -1,5 +1,6 @@
+declare var toastr: any;
 declare module App.Contact {
-    import ModalService = App.Services.ModalService;
+    import EmailService = App.Services.EmailService;
     class ToastMessage {
         title: string;
         subTitle: string;
@@ -8,18 +9,20 @@ declare module App.Contact {
     class ContactController {
         $scope: any;
         $http: ng.IHttpService;
-        modalService: ModalService;
-        firstName: string;
-        lastName: string;
+        $location: ng.ILocationService;
+        emailService: EmailService;
+        fullName: string;
         email: string;
         message: string;
+        messageLimit: number;
         attemptedSend: boolean;
         toastMessages: Array<ToastMessage>;
         emailRegex: RegExp;
         static $inject: string[];
-        constructor($scope: any, $http: ng.IHttpService, modalService: ModalService);
+        constructor($scope: any, $http: ng.IHttpService, $location: ng.ILocationService, emailService: EmailService);
         prepareToastMessages: () => void;
         sendEmail: (form: any) => void;
+        share: (provider: string) => void;
         footerClick: () => void;
     }
 }

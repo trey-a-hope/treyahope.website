@@ -9,11 +9,14 @@ var App;
         }());
         Contact.ToastMessage = ToastMessage;
         var ContactController = (function () {
-            function ContactController($scope, $http, modalService) {
+            function ContactController($scope, $http, $location, emailService) {
                 var _this = this;
                 this.$scope = $scope;
                 this.$http = $http;
-                this.modalService = modalService;
+                this.$location = $location;
+                this.emailService = emailService;
+                this.message = '';
+                this.messageLimit = 100;
                 this.attemptedSend = false;
                 this.toastMessages = new Array();
                 this.emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -23,48 +26,53 @@ var App;
                         _this.toastMessages = response.data;
                     })
                         .catch(function (error) {
-                        _this.modalService.displayToast('Error', error.message, 'danger');
                     });
                 };
                 this.sendEmail = function (form) {
                     _this.attemptedSend = true;
                     if (form.$valid) {
-                        var data = {
-                            firstName: _this.firstName,
-                            lastName: _this.lastName,
-                            email: _this.email,
-                            message: _this.message
-                        };
-                        _this.$http({
-                            method: 'POST',
-                            url: 'php/sendEmail.php',
-                            data: data,
-                            headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-                        }).success(function (result) {
-                            _this.firstName = '';
-                            _this.lastName = '';
-                            _this.email = '';
-                            _this.message = '';
+                        var to = 'tr3umphant.designs@gmail.com';
+                        var subject = 'New Contact - ' + _this.fullName + ' via ' + _this.email;
+                        var body = _this.message;
+                        _this.emailService.sendEmail(to, subject, body)
+                            .then(function (result) {
                             form.$setPristine();
-                            _this.modalService.displayToast('Got It', 'Message sent, I will respond shortly.', 'success');
-                        }).error(function (error) {
-                            _this.modalService.displayToast('Error', error.message, 'danger');
+                            toastr.success('Message sent.');
+                        })
+                            .catch(function (error) {
+                            toastr.error(error);
                         });
                     }
                     else {
-                        _this.modalService.displayToast('Error', 'There were erros in your submission.', 'danger');
+                        toastr.error('There were errors in your submission.');
+                    }
+                };
+                this.share = function (provider) {
+                    var url = _this.$location.absUrl();
+                    var text = 'Check out this service called Tr3umphant.Designs!';
+                    switch (provider) {
+                        case 'TWITTER':
+                            window.open('http://twitter.com/share?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '', 'left=0,top=0,width=550,height=450,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+                            break;
+                        case 'FACEBOOK':
+                            window.open('http://facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url) + '&title=' + encodeURIComponent(text) + '&description=' + encodeURIComponent('Check out this blog I found on Intercom.com'), '', 'left=0,top=0,width=650,height=420,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+                            break;
+                        case 'LINKEDIN':
+                            window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text), '', 'left=0,top=0,width=650,height=420,personalbar=0,toolbar=0,scrollbars=0,resizable=0');
+                            break;
+                        default:
+                            break;
                     }
                 };
                 this.footerClick = function () {
                     var rand = Math.floor((Math.random() * _this.toastMessages.length) + 0);
                     var toastMessage = _this.toastMessages[rand];
-                    _this.modalService.displayToast(toastMessage.title, toastMessage.subTitle, toastMessage.class);
                 };
                 this.prepareToastMessages();
             }
             return ContactController;
         }());
-        ContactController.$inject = ['$scope', '$http', 'ModalService'];
+        ContactController.$inject = ['$scope', '$http', '$location', 'EmailService'];
         Contact.ContactController = ContactController;
         angular.module('treyahope').controller('ContactController', ContactController);
     })(Contact = App.Contact || (App.Contact = {}));

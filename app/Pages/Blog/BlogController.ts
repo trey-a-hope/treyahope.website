@@ -1,8 +1,7 @@
-module App.About {
+module App.Pages.Blog {
     import MyFirebaseRef = Services.MyFirebaseRef;
 
-    export class AboutController {
-        showImage: boolean = true;
+    export class BlogController {
         static $inject = ['$scope', '$http', 'MyFirebaseRef'];
         constructor(public $scope: any, public $http: ng.IHttpService, public myFirebaseRef: MyFirebaseRef){
             // var spotifyApi = new SpotifyWebApi();
@@ -14,10 +13,6 @@ module App.About {
             //     });
         }
 
-        viewMyResume = (): void => {
-            window.open("https://drive.google.com/open?id=0B0_tFXHHRl4tUl9uS2dwb05WWDQ"); 
-        }
-
     }
-    angular.module('treyahope').controller('AboutController', AboutController);
+    angular.module('treyahope').controller('BlogController', BlogController);
 }

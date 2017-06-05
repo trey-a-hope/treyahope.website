@@ -132,7 +132,64 @@
   <section class="animated fadeIn">
       <div class="row">
           <div class="col">
-              <h1>Contact Page</h1>
+              <ng-form novalidate name="contactForm">
+                  <div class="card-block">
+                  <div class="text-center">
+                      <h3><i class="fa fa-envelope"></i> Write To Me</h3>
+                      <hr class="mt-2 mb-2">
+                  </div>
+
+                  <!--Body-->
+                  <p class="text-center">If you have a request already in mind, or if you just have general questions that you need answered, please submit a message.</p>
+                  <br>
+
+                  <!--Body-->
+                  <div class="md-form">
+                      <i class="fa fa-user prefix"></i>
+                      <input type="text" id="name" class="form-control" required="required" ng-model="vm.fullName">
+                      <label for="name">Your full name</label>
+                  </div>
+
+                  <div class="md-form">
+                      <i class="fa fa-envelope prefix"></i>
+                      <input type="text" id="form2" class="form-control" ng-model="vm.email">
+                      <label for="form2">Your email</label>
+                  </div>
+
+                  <div class="md-form">
+                      <i class="fa fa-tag prefix"></i>
+                      <textarea type="text" id="form8" class="md-textarea" ng-model="vm.message" maxlength="100"></textarea>
+                      <label for="form8">Message <strong>({{ vm.message.length + '/' + vm.messageLimit }})</strong></label>
+                  </div>
+
+                  <div class="text-center">
+                      <button class="btn btn-default" ng-click="vm.sendEmail(contactForm)">Send Message</button>
+
+                      <div class="call">
+                          <br>
+                          <p>Or call me directly
+                              <br>
+                              <span><i class="fa fa-phone"> </i></span>(937)270-5527</p>
+                      </div>
+                      <hr>
+                      <h2>Like My Page?</h2>
+                      <h5>Please share my website! It's quick and I'll thank you forever.</h5>
+                      <div class="btn-group dropup">
+                          <button class="btn teal darken 4 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Share</button>
+
+                          <div class="dropdown-menu">
+                              <a class="dropdown-item" href="" ng-click="vm.share('FACEBOOK')">To Facebook</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="" ng-click="vm.share('TWITTER')">To Twitter</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="" ng-click="vm.share('LINKEDIN')">To LinkedIn</a>
+                          </div>
+                      </div>
+
+                  </div>
+
+              </div>
+              </ng-form>
           </div>
       </div>
   </section>

@@ -1,12 +1,10 @@
-declare module App.About {
+declare module App.Pages.Blog {
     import MyFirebaseRef = Services.MyFirebaseRef;
-    class AboutController {
+    class BlogController {
         $scope: any;
         $http: ng.IHttpService;
         myFirebaseRef: MyFirebaseRef;
-        showImage: boolean;
         static $inject: string[];
         constructor($scope: any, $http: ng.IHttpService, myFirebaseRef: MyFirebaseRef);
-        viewMyResume: () => void;
     }
 }

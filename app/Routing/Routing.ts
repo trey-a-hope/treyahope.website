@@ -34,11 +34,19 @@ module Routing {
                 controllerAs: 'vm'
             });
 
-            /* Comments */
+            /* Reviews */
             this.$stateProvider.state('reviews', {
                 url: '/reviews',
                 templateUrl: 'app/Pages/Comments/CommentsTemplate.html',
                 controller: 'CommentsController',
+                controllerAs: 'vm'
+            });
+
+            /* Blog */
+            this.$stateProvider.state('blog', {
+                url: '/blog',
+                templateUrl: 'app/Pages/Blog/BlogTemplate.html',
+                controller: 'BlogController',
                 controllerAs: 'vm'
             });
 

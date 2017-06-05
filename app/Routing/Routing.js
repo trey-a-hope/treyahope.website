@@ -33,6 +33,12 @@ var Routing;
                 controller: 'CommentsController',
                 controllerAs: 'vm'
             });
+            this.$stateProvider.state('blog', {
+                url: '/blog',
+                templateUrl: 'app/Pages/Blog/BlogTemplate.html',
+                controller: 'BlogController',
+                controllerAs: 'vm'
+            });
             this.$stateProvider.state('contact', {
                 url: '/contact',
                 templateUrl: 'app/Pages/Contact/ContactTemplate.html',
