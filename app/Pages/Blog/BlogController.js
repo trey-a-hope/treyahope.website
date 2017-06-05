@@ -9,6 +9,9 @@ var App;
                     this.$scope = $scope;
                     this.$http = $http;
                     this.myFirebaseRef = myFirebaseRef;
+                    this.viewBlog = function () {
+                        alert("TODO: Blog");
+                    };
                 }
                 return BlogController;
             }());

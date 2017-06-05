@@ -7,7 +7,9 @@ module Routing {
             /* Landing Page */
             this.$stateProvider.state('home', {
                 url: '/',
-                templateUrl: 'app/Pages/Home/HomeTemplate.html'
+                templateUrl: 'app/Pages/Home/HomeTemplate.html',
+                controller: 'HomeController',
+                controllerAs: 'vm'
             });
 
             /* About */

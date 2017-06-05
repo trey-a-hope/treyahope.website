@@ -18,6 +18,7 @@
         "app/Pages/Comments/CommentsController.ts",
         "app/Pages/Contact/ContactController.ts",
         "app/Pages/GraphicDesign/GraphicDesignController.ts",
+        "app/Pages/Home/HomeController.ts",
         "app/Pages/Portfolio/PortfolioController.ts",
         "app/Pages/Projects/ProjectsController.ts",
         "app/Pages/Service/ServiceController.ts",

@@ -6,5 +6,6 @@ declare module App.Pages.Blog {
         myFirebaseRef: MyFirebaseRef;
         static $inject: string[];
         constructor($scope: any, $http: ng.IHttpService, myFirebaseRef: MyFirebaseRef);
+        viewBlog: () => void;
     }
 }

@@ -13,6 +13,10 @@ module App.Pages.Blog {
             //     });
         }
 
+        viewBlog = (): void => {
+            alert("TODO: Blog");
+        }
+
     }
     angular.module('treyahope').controller('BlogController', BlogController);
 }

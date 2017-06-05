@@ -10,7 +10,7 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <!-- Material Design Bootstrap -->
-    <link href="css/mdb.min.css" rel="stylesheet">
+    <link href="css/mdb.css" rel="stylesheet">
     <!-- Your custom styles (optional) -->
     <link href="css/style.css" rel="stylesheet">
     <!-- Google Analytics -->
@@ -36,6 +36,7 @@
     <script src="app/Pages/Comments/CommentsController.js"></script>
     <script src="app/Pages/Contact/ContactController.js"></script>
     <script src="app/Pages/GraphicDesign/GraphicDesignController.js"></script>
+    <script src="app/Pages/Home/HomeController.js"></script>
     <script src="app/Pages/Portfolio/PortfolioController.js"></script>
     <script src="app/Pages/Projects/ProjectsController.js"></script>
     <script src="app/Pages/Service/ServiceController.js"></script>
@@ -92,10 +93,10 @@
       }
     </style>
     
-    <div class="container" style="padding: 30px 0">
-        <div ui-view="">
-        </div>
-    </div>
+    <!-- View through UI Router -->
+    <div ui-view=""></div>
+
+    <!--class="container" style="padding: 30px 0"-->
 
     <footer class="page-footer teal darken-4">
         <div class="container-fluid">

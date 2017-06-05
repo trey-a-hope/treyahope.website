@@ -7,7 +7,9 @@ var Routing;
             this.$urlRouteProvider = $urlRouteProvider;
             this.$stateProvider.state('home', {
                 url: '/',
-                templateUrl: 'app/Pages/Home/HomeTemplate.html'
+                templateUrl: 'app/Pages/Home/HomeTemplate.html',
+                controller: 'HomeController',
+                controllerAs: 'vm'
             });
             this.$stateProvider.state('about', {
                 url: '/about',
