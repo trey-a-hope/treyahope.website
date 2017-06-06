@@ -61,101 +61,78 @@
             </div>
         </div>
         <hr>
-    <h4>Pricing</h4>
-    <p>Development pricing is very project specific, meaning these prices are not set in stone. Based on factors such as time, material needed, and purpose for your project, the fee can easily flucuate; these, however, are the most accurate estimates. <strong>Note - Payments will require half of the cost upfront as deposit, and the other half once the project is complete.</strong></p>
-    <div class="row">
-        <div class="col-sm-4">
-                <div class="card card-cascade wider">
-                    <div class="view overlay hm-white-slight">
-                        <img src="img/service/basic_plan.png" class="img-fluid" alt="">
-                        <a>
-                            <div class="mask waves-effect waves-light"></div>
-                        </a>
-                    </div>
-                    <div class="card-block text-center">
-                        <h5>Website</h5>
-                        <h4 class="card-title red-text">
-                            <strong>
-                                Basic
-                            </strong>
-                        </h4>
-                        <ul >
-                            <li class="green-text"><i class="fa fa-check"></i>Single/Multiple Page Application</li>
-                            <li class="green-text"><i class="fa fa-check"></i>E-Mail Functionality</li>
-                        </ul>
-                        <p class="card-text">
-                            Most common plan; used for people who want to display certain content with minimal interactions/updates to what is presented. (i.e. portofolio website)
-                        </p>
-                        <div class="card-footer">
-                            <span class="left red-text">$399.00</span>
-                            <span class="right">
-                                <!--<a data-toggle="tooltip" data-placement="top" title="Add to Cart"><i class="fa fa-shopping-cart"></i></a>
-                                <a data-toggle="tooltip" data-placement="top" title="Share"><i class="fa fa-share-alt"></i></a>
-                                <a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a>-->
-                            </span>
-                        </div>
-                    </div>
-                </div>
+        <div class="row">
+            <div class="col">
+                    <h4>Website Quote Calculator</h4>
+                    <p>Development pricing is very project specific, meaning these prices are not set in stone. Based on factors such as time, material needed, and purpose for your project, the fee can easily flucuate; these, however, are the most accurate estimates. <strong>Note - Payments will require half of the cost upfront as deposit, and the other half once the project is complete.</strong></p>
+                    <p><strong>(* represents Google's Firebase Feature)</strong></p>
+            </div>
         </div>
-            <div class="col-sm-4">
-                <div class="card card-cascade wider">
-                    <div class="view overlay hm-white-slight">
-                        <img src="img/service/plus_plan.jpeg" class="img-fluid" alt="">
-                        <a>
-                            <div class="mask waves-effect waves-light"></div>
-                        </a>
-                    </div>
-                    <div class="card-block text-center">
-                        <h5>Website</h5>
-                        <h4 class="card-title teal-text">
-                            <strong>
-                                Plus
-                            </strong>
-                        </h4>
-                        <ul>
-                            <li class="green-text"><i class="fa fa-check"></i>Realtime Database</li>
-                            <li class="green-text"><i class="fa fa-check"></i>User Authentication</li>
-                            <li class="green-text"><i class="fa fa-check"></i>File Storage</li>
-                        </ul>
-                        <p class="card-text">
-                            This plan is used for people/companies who plan to have a bit more interaction with their websites. For example, if you want your users to have their own profiles, this is the best plan for you.
-                        </p>
-                        <div class="card-footer">
-                            <span class="left teal-text">$599.00</span>
-                            <span class="right">
-                                <p class="green-text">Best Deal</p>
-                            </span>
-                        </div>
-                    </div>
-                </div>
+        <!-- Quote Table -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Feature</th>
+                    <th>Description</th>
+                    <th>Cost</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Database Integration -->
+                <tr>
+                    <td>
+                        <i class="fa fa-database orange-text"></i>
+                    </td>
+                    <td>
+                        Database Integration*
+                    </td>
+                    <td>
+                        NoSQL Database, information is stored securly and accessed swiftly.
+                    </td>
+                    <td>
+                        {{ vm.databaseIntegrationCost | currency: "$" }}
+                    </td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="databaseIntegration" ng-model="vm.databaseIntegration">
+                            <label for="databaseIntegration"></label>
+                        </fieldset>
+                    </td>
+                </tr>
+                <!-- User Authentication -->
+                <tr>
+                    <td>
+                        <i class="fa fa-users orange-text"></i>
+                    </td>
+                    <td>
+                        User Authentication*
+                    </td>
+                    <td>
+                        Have users authenticate themselves by email & password, Facebook, Twitter, Google+, or Github.
+                    </td>
+                    <td>{{ vm.userAuthenticationCost | currency: "$" }}</td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="userAuthentication" ng-model="vm.userAuthentication">
+                            <label for="userAuthentication"></label>
+                        </fieldset>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+        <div class="row">
+            <div class="col">
+                <hr>
+            </div>
         </div>
-                <div class="col-sm-4">
-                <div class="card card-cascade wider">
-                    <div class="view overlay hm-white-slight">
-                        <img src="img/service/ultra_plan.png" class="img-fluid" alt="">
-                        <a>
-                            <div class="mask waves-effect waves-light"></div>
-                        </a>
-                    </div>
-                    <div class="card-block text-center">
-                        <h5>Website</h5>
-                        <h4 class="card-title purple-text">
-                            <strong>
-                                Ultra
-                            </strong>
-                        </h4>
-                        <ul >
-                            <li class="green-text"><i class="fa fa-check"></i>Google Analytics, Maps, or any APIs <a href="https://developers.google.com/apis-explorer/#p/"><strong>here</strong></a></li>
-                        </ul>
-                        <p class="card-text">
-                            The ultimate package for your website. With everything bundled from the previous two tiers, this plan allows you to take control of any of Google's APIs, i.e. Google Maps to display your stores location, or Google Analytics to see traffic on your website.
-                        </p>
-                        <div class="card-footer">
-                            <span class="left purple-text">$699.00</span>
-                            <span class="right">
-                            </span>
-                        </div>
-                    </div>
+        <div class="row">
+            <div class="col">
+                <button class="btn orange pull-left" ng-click="vm.calculate()">Calculate Total</button>
+                <div class="md-form pull-right">
+                    <h1 class="green-text">{{ vm.totalCost | currency: "$" }}</h1>
                 </div>
             </div>
         </div>
