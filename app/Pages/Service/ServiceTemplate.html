@@ -80,6 +80,68 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Number of Pages -->
+                <tr>
+                    <td>
+                        <i class="fa fa-wpforms orange-text"></i>
+                    </td>
+                    <td>
+                        Number of Pages
+                    </td>
+                    <td>
+                        For single or multiple page applications.
+                    </td>
+                    <td>
+                        {{ vm.pageCost | currency: "$" }}/page
+                    </td>
+                    <td>
+                        <form class="range-field">
+                            <input type="range" min="0" max="20" ng-model="vm.numberOfPages"/>
+                        </form>
+                    </td>
+                </tr>
+                <!-- Domain Name -->
+                <tr>
+                    <td>
+                        <i class="fa fa-pencil orange-text"></i>
+                    </td>
+                    <td>
+                        Domain Name
+                    </td>
+                    <td>
+                        The unique name that appears in the URL for your website.
+                    </td>
+                    <td>
+                        {{ vm.domainNameCost | currency: "$" }}/year
+                    </td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="domainName" ng-model="vm.domainName">
+                            <label for="domainName"></label>
+                        </fieldset>
+                    </td>
+                </tr>
+                <!-- Website Hosting -->
+                <tr>
+                    <td>
+                        <i class="fa fa-desktop orange-text"></i>
+                    </td>
+                    <td>
+                        Website Hosting
+                    </td>
+                    <td>
+                        Use my server, or host on your own server.
+                    </td>
+                    <td>
+                        {{ vm.websiteHostingCost | currency: "$" }}/year
+                    </td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="websiteHosting" ng-model="vm.websiteHosting">
+                            <label for="websiteHosting"></label>
+                        </fieldset>
+                    </td>
+                </tr>
                 <!-- Database Integration -->
                 <tr>
                     <td>
@@ -121,8 +183,50 @@
                     </td>
 
                 </tr>
-            </tbody>
-        </table>
+                <!-- Ecommerce -->
+                <tr>
+                    <td>
+                        <i class="fa fa-dollar orange-text"></i>
+                    </td>
+                    <td>
+                        Ecommerce
+                    </td>
+                    <td>
+                        Incorporate paid services into your app.
+                    </td>
+                    <td>{{ vm.ecommerceCost | currency: "$" }}</td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="ecommerce" ng-model="vm.ecommerce">
+                            <label for="ecommerce"></label>
+                        </fieldset>
+                    </td>
+
+                </tr>
+
+                <!-- TODO: FIREBASE STORAGE, GOOGLE APIS, EMAIL FUNCTIONALITY, AND BASE DEVELOPMENT FEE OF $250 -->
+
+                <!-- Ongoing Website Maintenance -->
+                <tr>
+                    <td>
+                        <i class="fa fa-wrench orange-text"></i>
+                    </td>
+                    <td>
+                        Ongoing Website Maintenance
+                    </td>
+                    <td>
+                        To ensure your website stays up to date.
+                    </td>
+                    <td>{{ vm.ongoingWebsiteMaintenanceCost | currency: "$" }}/year</td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="ongoingWebsiteMaintenance" ng-model="vm.ongoingWebsiteMaintenance">
+                            <label for="ongoingWebsiteMaintenance"></label>
+                        </fieldset>
+                    </td>
+
+                </tr>
+            </table>
         <div class="row">
             <div class="col">
                 <hr>
@@ -130,7 +234,7 @@
         </div>
         <div class="row">
             <div class="col">
-                <button class="btn orange pull-left" ng-click="vm.calculate()">Calculate Total</button>
+                <button class="btn orange pull-left" ng-click="vm.calculate()">Calculate Estimate</button>
                 <div class="md-form pull-right">
                     <h1 class="green-text">{{ vm.totalCost | currency: "$" }}</h1>
                 </div>
