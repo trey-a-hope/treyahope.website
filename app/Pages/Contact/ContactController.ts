@@ -15,7 +15,7 @@ module App.Contact {
         fullName: string;
         email: string;
         message: string = '';        
-        messageLimit: number = 100;
+        messageLimit: number = 400;
         attemptedSend: boolean = false;
         toastMessages: Array<ToastMessage> = new Array<ToastMessage>();
         emailRegex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -47,7 +47,7 @@ module App.Contact {
                         toastr.success('Message sent.');
                     })
                     .catch((error: any) => {
-                        toastr.error(error);
+                        toastr.error('Could not send message at this time.');
                     });
             }else{
                 toastr.error('There were errors in your submission.');

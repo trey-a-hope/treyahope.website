@@ -4,7 +4,8 @@ class TreyHope{
     constructor(){
         /* Module Setup */
         angular.module('treyahope', [
-            'ui.router'
+            'ui.router',
+            'ngSanitize'
         ])
         /* Directive - Static Include - Used for ng-include to keep parent scope through templates */
         .directive('staticInclude', ($http: ng.IHttpService, $templateCache: ng.ITemplateCacheService, $compile: ng.ICompileService) => {

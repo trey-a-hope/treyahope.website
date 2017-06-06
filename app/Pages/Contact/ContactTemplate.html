@@ -20,18 +20,18 @@
 
                     <div class="md-form">
                         <i class="fa fa-envelope prefix"></i>
-                        <input type="text" id="form2" class="form-control" ng-model="vm.email">
-                        <label for="form2">Your email</label>
+                        <input type="text" id="email" class="form-control" required="required" ng-pattern="vm.emailRegex" ng-model="vm.email">
+                        <label for="email">Your email</label>
                     </div>
 
                     <div class="md-form">
                         <i class="fa fa-tag prefix"></i>
-                        <textarea type="text" id="form8" class="md-textarea" ng-model="vm.message" maxlength="100"></textarea>
-                        <label for="form8">Message <strong>({{ vm.message.length + '/' + vm.messageLimit }})</strong></label>
+                        <textarea type="text" id="message" class="md-textarea" required="required"  ng-model="vm.message" maxlength="400"></textarea>
+                        <label for="message">Message <strong>({{ vm.message.length + '/' + vm.messageLimit }})</strong></label>
                     </div>
 
                     <div class="text-center">
-                        <button class="btn btn-default" ng-click="vm.sendEmail(contactForm)">Send Message</button>
+                        <button class="btn teal" ng-click="vm.sendEmail(contactForm)">Send Message</button>
 
                         <div class="call">
                             <br>
@@ -43,8 +43,7 @@
                         <h2>Like My Page?</h2>
                         <h5>Please share my website! It's quick and I'll thank you forever.</h5>
                         <div class="btn-group dropup">
-                            <button class="btn teal darken 4 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Share</button>
-
+                            <button class="btn teal darken 4 dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Share My Website</button>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="" ng-click="vm.share('FACEBOOK')">To Facebook</a>
                                 <div class="dropdown-divider"></div>
@@ -53,9 +52,7 @@
                                 <a class="dropdown-item" href="" ng-click="vm.share('LINKEDIN')">To LinkedIn</a>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
                 </ng-form>
             </div>

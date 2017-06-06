@@ -10,17 +10,12 @@ module App.Services {
             return this.$http({
                 method: 'POST',
                 url: 'php/sendEmail.php',
-                data: {
-                    to: to,
-                    subject: subject,
-                    body: body
-                },
+                data: { to: to, subject: subject, body: body },
                 headers: {'Content-Type': 'application/x-www-form-urlencoded'}
             });
         }
 
     }
-
 
     angular.module('treyahope').service('EmailService', EmailService);
 }

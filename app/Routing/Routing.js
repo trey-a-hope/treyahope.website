@@ -41,6 +41,15 @@ var Routing;
                 controller: 'BlogController',
                 controllerAs: 'vm'
             });
+            this.$stateProvider.state('full-blog', {
+                url: '/full-blog',
+                templateUrl: 'app/Pages/Blog/FullBlogTemplate.html',
+                controller: 'FullBlogController',
+                controllerAs: 'vm',
+                params: {
+                    blog: null
+                }
+            });
             this.$stateProvider.state('contact', {
                 url: '/contact',
                 templateUrl: 'app/Pages/Contact/ContactTemplate.html',

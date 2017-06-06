@@ -16,7 +16,7 @@ var App;
                 this.$location = $location;
                 this.emailService = emailService;
                 this.message = '';
-                this.messageLimit = 100;
+                this.messageLimit = 400;
                 this.attemptedSend = false;
                 this.toastMessages = new Array();
                 this.emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -40,7 +40,7 @@ var App;
                             toastr.success('Message sent.');
                         })
                             .catch(function (error) {
-                            toastr.error(error);
+                            toastr.error('Could not send message at this time.');
                         });
                     }
                     else {

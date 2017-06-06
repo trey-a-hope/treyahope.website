@@ -29,6 +29,11 @@ section#blog{
     background-position: center;
     background-repeat: repeat;
 }
+section#full-blog{
+    background-image: url('../img/background/grid-noise.png');
+    background-position: center;
+    background-repeat: repeat;
+}
 section#contact{
     background-image: url('../img/background/brushed-alum.png');
     background-position: center;

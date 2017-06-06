@@ -52,6 +52,17 @@ module Routing {
                 controllerAs: 'vm'
             });
 
+            /* Full Blog */
+            this.$stateProvider.state('full-blog', {
+                url: '/full-blog',
+                templateUrl: 'app/Pages/Blog/FullBlogTemplate.html',
+                controller: 'FullBlogController',
+                controllerAs: 'vm',
+                params: {
+                    blog: null
+                }
+            });
+
             /* Contact */
             this.$stateProvider.state('contact', {
                 url: '/contact',

@@ -1,7 +1,8 @@
 var TreyHope = (function () {
     function TreyHope() {
         angular.module('treyahope', [
-            'ui.router'
+            'ui.router',
+            'ngSanitize'
         ])
             .directive('staticInclude', function ($http, $templateCache, $compile) {
             return function (scope, element, attrs) {
