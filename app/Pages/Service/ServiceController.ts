@@ -15,9 +15,11 @@ module App.Pages.Service {
         ecommerce: boolean = false;
         ongoingWebsiteMaintenanceCost: number = 29.99;
         ongoingWebsiteMaintenance: boolean = false;
+        storageCost: number = 59.99;
+        storage: boolean = false;
         totalCost: number;
-        static $inject = ['$scope'];
-        constructor(public $scope: any){
+        static $inject = ['$scope', '$state'];
+        constructor(public $scope: any, public $state: ng.ui.IStateService){
         }
 
         calculate = (): void => {
@@ -29,6 +31,12 @@ module App.Pages.Service {
             this.websiteHosting ? this.totalCost += this.websiteHostingCost : null;
             this.ecommerce ? this.totalCost += this.ecommerceCost : null;
             this.ongoingWebsiteMaintenance ? this.totalCost += this.ongoingWebsiteMaintenanceCost : null;
+            this.storage ? this.totalCost += this.storageCost : null;
+        }
+
+        sendQuoteToContact = (): void => {
+            var message = 'goog booger';
+            this.$state.go('contact', { message: message });
         }
 
     }

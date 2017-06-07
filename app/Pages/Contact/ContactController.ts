@@ -20,8 +20,12 @@ module App.Contact {
         toastMessages: Array<ToastMessage> = new Array<ToastMessage>();
         emailRegex: RegExp = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 
-        static $inject = ['$scope', '$http', '$location', 'EmailService'];
-        constructor(public $scope: any, public $http: ng.IHttpService, public $location: ng.ILocationService, public emailService: EmailService){
+        static $inject = ['$scope', '$http', '$location', 'EmailService', '$state'];
+        constructor(public $scope: any, public $http: ng.IHttpService, public $location: ng.ILocationService, public emailService: EmailService, public $state: ng.ui.IStateService){
+            if(this.$state.params.message != null){
+                this.message = this.$state.params.message;
+            }
+            
             this.prepareToastMessages();
         }
 

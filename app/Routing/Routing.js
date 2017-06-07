@@ -54,7 +54,10 @@ var Routing;
                 url: '/contact',
                 templateUrl: 'app/Pages/Contact/ContactTemplate.html',
                 controller: 'ContactController',
-                controllerAs: 'vm'
+                controllerAs: 'vm',
+                params: {
+                    message: null
+                }
             });
             this.$urlRouteProvider.otherwise('/');
         }

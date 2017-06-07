@@ -1,6 +1,7 @@
 declare module App.Pages.Service {
     class ServiceController {
         $scope: any;
+        $state: ng.ui.IStateService;
         numberOfPages: number;
         pageCost: number;
         databaseIntegrationCost: number;
@@ -15,9 +16,12 @@ declare module App.Pages.Service {
         ecommerce: boolean;
         ongoingWebsiteMaintenanceCost: number;
         ongoingWebsiteMaintenance: boolean;
+        storageCost: number;
+        storage: boolean;
         totalCost: number;
         static $inject: string[];
-        constructor($scope: any);
+        constructor($scope: any, $state: ng.ui.IStateService);
         calculate: () => void;
+        sendQuoteToContact: () => void;
     }
 }

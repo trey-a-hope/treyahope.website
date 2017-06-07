@@ -9,12 +9,13 @@ var App;
         }());
         Contact.ToastMessage = ToastMessage;
         var ContactController = (function () {
-            function ContactController($scope, $http, $location, emailService) {
+            function ContactController($scope, $http, $location, emailService, $state) {
                 var _this = this;
                 this.$scope = $scope;
                 this.$http = $http;
                 this.$location = $location;
                 this.emailService = emailService;
+                this.$state = $state;
                 this.message = '';
                 this.messageLimit = 400;
                 this.attemptedSend = false;
@@ -69,11 +70,14 @@ var App;
                     var rand = Math.floor((Math.random() * _this.toastMessages.length) + 0);
                     var toastMessage = _this.toastMessages[rand];
                 };
+                if (this.$state.params.message != null) {
+                    this.message = this.$state.params.message;
+                }
                 this.prepareToastMessages();
             }
             return ContactController;
         }());
-        ContactController.$inject = ['$scope', '$http', '$location', 'EmailService'];
+        ContactController.$inject = ['$scope', '$http', '$location', 'EmailService', '$state'];
         Contact.ContactController = ContactController;
         angular.module('treyahope').controller('ContactController', ContactController);
     })(Contact = App.Contact || (App.Contact = {}));

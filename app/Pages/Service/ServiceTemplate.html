@@ -183,6 +183,26 @@
                     </td>
 
                 </tr>
+                <!-- Storage -->
+                <tr>
+                    <td>
+                        <i class="fa fa-clone orange-text"></i>
+                    </td>
+                    <td>
+                        Storage*
+                    </td>
+                    <td>
+                        Uploading of pdfs, word documents, pictures, videos, etc.
+                    </td>
+                    <td>{{ vm.storageCost | currency: "$" }}</td>
+                    <td>
+                        <fieldset class="form-group">
+                            <input type="checkbox" id="storage" ng-model="vm.storage">
+                            <label for="storage"></label>
+                        </fieldset>
+                    </td>
+
+                </tr>
                 <!-- Ecommerce -->
                 <tr>
                     <td>
@@ -203,9 +223,6 @@
                     </td>
 
                 </tr>
-
-                <!-- TODO: FIREBASE STORAGE, GOOGLE APIS, EMAIL FUNCTIONALITY, AND BASE DEVELOPMENT FEE OF $250 -->
-
                 <!-- Ongoing Website Maintenance -->
                 <tr>
                     <td>
@@ -235,6 +252,7 @@
         <div class="row">
             <div class="col">
                 <button class="btn orange pull-left" ng-click="vm.calculate()">Calculate Estimate</button>
+                <button ng-show="vm.totalCost > 0" class="btn blue pull-left" ng-click="vm.sendQuoteToContact()">Contact Now With This Quote</button>
                 <div class="md-form pull-right">
                     <h1 class="green-text">{{ vm.totalCost | currency: "$" }}</h1>
                 </div>

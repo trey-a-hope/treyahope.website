@@ -5,9 +5,10 @@ var App;
         var Service;
         (function (Service) {
             var ServiceController = (function () {
-                function ServiceController($scope) {
+                function ServiceController($scope, $state) {
                     var _this = this;
                     this.$scope = $scope;
+                    this.$state = $state;
                     this.numberOfPages = 0;
                     this.pageCost = 25.99;
                     this.databaseIntegrationCost = 99.99;
@@ -22,6 +23,8 @@ var App;
                     this.ecommerce = false;
                     this.ongoingWebsiteMaintenanceCost = 29.99;
                     this.ongoingWebsiteMaintenance = false;
+                    this.storageCost = 59.99;
+                    this.storage = false;
                     this.calculate = function () {
                         _this.totalCost = 0;
                         _this.totalCost += _this.numberOfPages * _this.pageCost;
@@ -31,11 +34,16 @@ var App;
                         _this.websiteHosting ? _this.totalCost += _this.websiteHostingCost : null;
                         _this.ecommerce ? _this.totalCost += _this.ecommerceCost : null;
                         _this.ongoingWebsiteMaintenance ? _this.totalCost += _this.ongoingWebsiteMaintenanceCost : null;
+                        _this.storage ? _this.totalCost += _this.storageCost : null;
+                    };
+                    this.sendQuoteToContact = function () {
+                        var message = 'goog booger';
+                        _this.$state.go('contact', { message: message });
                     };
                 }
                 return ServiceController;
             }());
-            ServiceController.$inject = ['$scope'];
+            ServiceController.$inject = ['$scope', '$state'];
             Service.ServiceController = ServiceController;
             angular.module('treyahope').controller('ServiceController', ServiceController);
         })(Service = Pages.Service || (Pages.Service = {}));
