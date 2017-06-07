@@ -14,8 +14,8 @@ module App.About {
             //     });
         }
 
-        viewMyResume = (): void => {
-            window.open("https://drive.google.com/open?id=0B0_tFXHHRl4tUl9uS2dwb05WWDQ"); 
+        toggleImageShow = (): void => {
+            this.showImage = !this.showImage;
         }
 
     }

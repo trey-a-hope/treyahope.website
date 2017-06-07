@@ -1,9 +1,16 @@
 var TreyHope = (function () {
     function TreyHope() {
         angular.module('treyahope', [
-            'ui.router',
-            'ngSanitize'
+            'ui.bootstrap',
+            'ngSanitize',
+            'ngAnimate',
+            'ngToast'
         ])
+            .config(['ngToastProvider', function (ngToastProvider) {
+                ngToastProvider.configure({
+                    animation: 'slide'
+                });
+            }])
             .directive('staticInclude', function ($http, $templateCache, $compile) {
             return function (scope, element, attrs) {
                 var templatePath = attrs.staticInclude;

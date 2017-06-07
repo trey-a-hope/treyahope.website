@@ -4,12 +4,13 @@ var App;
     (function (About) {
         var AboutController = (function () {
             function AboutController($scope, $http, myFirebaseRef) {
+                var _this = this;
                 this.$scope = $scope;
                 this.$http = $http;
                 this.myFirebaseRef = myFirebaseRef;
                 this.showImage = true;
-                this.viewMyResume = function () {
-                    window.open("https://drive.google.com/open?id=0B0_tFXHHRl4tUl9uS2dwb05WWDQ");
+                this.toggleImageShow = function () {
+                    _this.showImage = !_this.showImage;
                 };
             }
             return AboutController;

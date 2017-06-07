@@ -5,10 +5,10 @@ declare module App.Services {
         private databaseRef;
         homeDatabaseRef: Firebase;
         aboutDatabaseRef: Firebase;
-        serviceDatabaseRef: Firebase;
+        skillsDatabaseRef: Firebase;
+        graphicDesignDatabaseRef: Firebase;
+        portfolioDatabaseRef: Firebase;
         projectsDatabaseRef: Firebase;
-        reviewsDatabaseRef: Firebase;
-        blogDatabaseRef: Firebase;
         contactDatabaseRef: Firebase;
         storageRef: any;
         constructor();

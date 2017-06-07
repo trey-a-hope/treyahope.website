@@ -11,10 +11,10 @@ module App.Services {
         private databaseRef: Firebase;
         public homeDatabaseRef: Firebase;
         public aboutDatabaseRef: Firebase;
-        public serviceDatabaseRef: Firebase;
+        public skillsDatabaseRef: Firebase;
+        public graphicDesignDatabaseRef: Firebase;
+        public portfolioDatabaseRef: Firebase;
         public projectsDatabaseRef: Firebase;
-        public reviewsDatabaseRef: Firebase;
-        public blogDatabaseRef: Firebase;
         public contactDatabaseRef: Firebase;
         public storageRef: any;
 
@@ -23,10 +23,9 @@ module App.Services {
             this.databaseRef = this.firebase.database().ref();
             this.homeDatabaseRef = this.databaseRef.child('Home');
             this.aboutDatabaseRef = this.databaseRef.child('About');
-            this.serviceDatabaseRef = this.databaseRef.child('Service');
-            this.projectsDatabaseRef = this.databaseRef.child('Projects');
-            this.reviewsDatabaseRef = this.databaseRef.child('Reviews');
-            this.blogDatabaseRef = this.databaseRef.child('Blog');
+            this.skillsDatabaseRef = this.databaseRef.child('Skills');
+            this.graphicDesignDatabaseRef = this.databaseRef.child('GraphicDesign');
+            this.portfolioDatabaseRef = this.databaseRef.child('Portfolio');
             this.contactDatabaseRef = this.databaseRef.child('Contact');
             this.storageRef = this.firebase.storage().ref();   
          }
